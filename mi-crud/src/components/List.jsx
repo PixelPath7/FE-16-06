@@ -1,6 +1,7 @@
 import React from "react";
 import Item from "./Item";
 
+// Componente que renderiza una lista de ítems usando el componente Item
 function List({ items, deleteItem, editItem }) {
   return (
     <ul>
