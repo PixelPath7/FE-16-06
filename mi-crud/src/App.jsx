@@ -20,14 +20,14 @@ function App(){
   }, [items]);
 
   // Agrega un nuevo ítem o actualiza uno existente
-  const addOrUpdateItem = (value) => {
+  const addOrUpdateItem = (newItemData) => {
     if (itemToEdit) {
-      setItems(items.map(item => item.id === itemToEdit.id ? {...item, value} : item));
+      setItems(items.map(item => item.id === itemToEdit.id ? {...item, ...newItemData} : item));
       setItemToEdit(null);
     } else {
       setItems([
         ...items,
-        { id: Date.now(), value }
+        { id: Date.now(), ...newItemData }
       ]);
     }
   };
@@ -43,8 +43,8 @@ function App(){
   };
 
   return (
-    <div className="App">
-      <h1>CRUD con LocalStorage</h1>
+    <div className="main-container">
+      <h1>Evaluación de Alumnos</h1>
       <Form addOrUpdateItem={addOrUpdateItem} itemToEdit={itemToEdit} />
       <List items={items} deleteItem={deleteItem} editItem={editItem} />
     </div>

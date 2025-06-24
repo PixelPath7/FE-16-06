@@ -1,42 +1,146 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* CENTRADO GLOBAL */
+body, html, #root {
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f6fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* puedes usar center si quieres centrado vertical total */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* TÍTULOS */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #2d3436;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #2d3436;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* FORMULARIO */
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+form input {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
 }
 
+form button {
+  background-color: #2979ff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #1565c0;
+}
+
+/* CARD DE ALUMNO */
 .card {
-  padding: 2em;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  text-align: center;
+  color: #2d3436;
 }
 
-.read-the-docs {
-  color: #888;
+/* TEXTOS */
+.card p {
+  margin: 6px 0;
+}
+
+/* BOTONES */
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.btn.editar {
+  background-color: #f1c40f;
+  color: black;
+}
+
+.btn.eliminar {
+  background-color: #e74c3c;
+}
+
+/* ETIQUETAS DE EVALUACIÓN */
+.badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.rojo {
+  background-color: #e74c3c;
+}
+
+.amarillo {
+  background-color: #f39c12;
+}
+
+.azul {
+  background-color: #3498db;
+}
+
+.verde {
+  background-color: #2ecc71;
 }
