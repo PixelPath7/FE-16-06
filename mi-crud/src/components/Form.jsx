@@ -22,18 +22,33 @@ function Form({addOrUpdateItem, itemToEdit}){
     // Maneja el envío del formulario y ejecuta la función de agregar o actualizar
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!nombre || !asignatura || promedio === '') return;
+
+    // Validaciones
+        if (!nombre.trim()) {
+            alert("El campo 'Nombre' es obligatorio.");
+            return;
+        }
+
+        if (!asignatura.trim()) {
+            lert("El campo 'Asignatura' es obligatorio.");
+            return;
+        }
+
+        const promedioNum = parseFloat(promedio);
+        if (isNaN(promedioNum) || promedioNum < 1 || promedioNum > 7) {
+            alert("El promedio debe ser un número entre 1 y 7.");
+            return;
+        }
 
         addOrUpdateItem({
             nombre,
             asignatura,
-            promedio
+            promedio: promedioNum
         });
 
         setNombre('');
         setAsignatura('');
         setPromedio('');
-
     };
 
     return (

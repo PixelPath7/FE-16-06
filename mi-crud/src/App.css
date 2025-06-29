@@ -1,21 +1,19 @@
 /* CENTRADO GLOBAL */
 body, html, #root {
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
-  background-color: #f5f6fa;
+  background-color: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* puedes usar center si quieres centrado vertical total */
+  display: block;
 }
 
 /* CONTENEDOR PRINCIPAL */
 .main-container {
   width: 100%;
   max-width: 600px;
+  margin: 0 auto;
   padding: 40px 20px;
   box-sizing: border-box;
 }
