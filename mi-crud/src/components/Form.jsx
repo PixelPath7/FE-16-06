@@ -30,7 +30,7 @@ function Form({addOrUpdateItem, itemToEdit}){
         }
 
         if (!asignatura.trim()) {
-            lert("El campo 'Asignatura' es obligatorio.");
+            alert("El campo 'Asignatura' es obligatorio.");
             return;
         }
 

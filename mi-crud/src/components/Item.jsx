@@ -59,14 +59,16 @@ const styles = {
     gap: "10px"
   },
   nombre: {
-    fontSize: "18px"
+    fontSize: "18px",
+    color: "black"
   },
   asignatura: {
     fontSize: "14px",
     color: "#555"
   },
   promedio: {
-    fontSize: "14px"
+    fontSize: "14px",
+    color: "black"
   },
   etiqueta: {
     display: "inline-block",
